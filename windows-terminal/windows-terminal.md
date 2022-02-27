@@ -11,6 +11,7 @@ doskey ga=git add $*
 doskey gp=git pull
 doskey gb=git branch
 doskey gs=git status
+doskey gd=git diff
 doskey gco=git checkout $1
 doskey gocb=git checkout -b $1
 doskey gpo=git pull origin $1
