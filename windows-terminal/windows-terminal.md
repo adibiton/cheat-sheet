@@ -25,6 +25,9 @@ doskey aliases=code c:\p-dev\init.cmd
 doskey mkcd=mkdir $1 ^&^& cd $1
 doskey e=explorer $1
 doskey h=doskey /h
+
+REM Azure-cli
+doskey azlocation=az account list-locations --query "[?contains(name, '$1')].{Name:name, DisplayName:displayName}" --output table
 ```
 - Open terminal => Settings => Command Prompt
 - Fill `cmd.exe /K C:\p-dev\init.cmd` in the Command line input:   ![terminal-configuration](./settings.png)
