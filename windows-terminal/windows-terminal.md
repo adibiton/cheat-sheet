@@ -16,6 +16,7 @@ doskey gco=git checkout $1
 doskey gocb=git checkout -b $1
 doskey gpo=git pull origin $1
 doskey gc=git commit -a -m "$*"
+doskey gcm=git commit -m "$*"
 doskey cdp=cd c:\p-dev
 doskey cdd=cd c:\dev
 doskey cdl=cd c:\l-dev
@@ -27,7 +28,7 @@ doskey e=explorer $1
 doskey h=doskey /h
 
 REM Azure-cli
-doskey azlocation=az account list-locations --query "[?contains(name, '$1')].{Name:name, DisplayName:displayName}" --output table
+doskey azlocation=   --output table
 ```
 - Open terminal => Settings => Command Prompt
 - Fill `cmd.exe /K C:\p-dev\init.cmd` in the Command line input:   ![terminal-configuration](./settings.png)
