@@ -22,6 +22,11 @@ ssh into virtual machine
 ```
 
 halt cluster
-```
+```shell
     minikube stop
+```
+
+Delete evicted pods
+```shell
+kubectl get pods | grep Evicted | awk ‘{print $1}’ | xargs kubectl delete pod
 ```
