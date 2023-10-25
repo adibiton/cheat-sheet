@@ -30,3 +30,8 @@ Delete evicted pods
 ```shell
 kubectl get pods | grep Evicted | awk ‘{print $1}’ | xargs kubectl delete pod
 ```
+
+Print the content of a file running on a pod to the host machine
+```shell
+kubectl exec -it <pod-name> -- cat <file-path> > <file-name>
+```
