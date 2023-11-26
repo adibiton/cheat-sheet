@@ -5,6 +5,17 @@
     ```bash
     pytest <test_path>
     ```
+### Run specific Python test
+
+    ```bash
+    pytest <test_path> -k <test_name>
+    ```
+
+### Print a list of failed tests at the end
+
+    ```bash
+    pytest <test_path> --lf
+    ```
 
 ### Run Python tests with coverage
 
