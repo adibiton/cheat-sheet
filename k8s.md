@@ -35,3 +35,8 @@ Print the content of a file running on a pod to the host machine
 ```shell
 kubectl exec -it <pod-name> -- cat <file-path> > <file-name>
 ```
+
+Get memory\cpu usage of pods ordered by usage
+```shell
+kubectl top pods --all-namespaces | sort --reverse --key 3 --numeric
+```

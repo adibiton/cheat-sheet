@@ -33,3 +33,9 @@
     ```bash
     coverage run -m pytest <test_path> && coverage html
     ```
+
+### Show print output in tests
+
+    ```python
+    self.maxDiff = None
+    ```
