@@ -40,3 +40,8 @@ Get memory\cpu usage of pods ordered by usage
 ```shell
 kubectl top pods --all-namespaces | sort --reverse --key 3 --numeric
 ```
+
+Describe all ingresses in a namespace ('ing' is short for ingress)
+```shell
+kubectl describe ing -n <namespace>
+```

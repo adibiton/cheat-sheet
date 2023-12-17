@@ -12,3 +12,15 @@ let data = datatable (id:string, value:string)
 data
 | parse value with * "This is the " value:int " value out of " * " values"
 ```
+
+### Multi level query
+
+```kusto
+let requests = customMetrics
+| distinct requestId = tostring(customDimensions.RequestId);
+traces
+| extend request = tostring(customDimensions.RequestId)
+| where request in (requests)
+| where message contains "test"
+
+```
