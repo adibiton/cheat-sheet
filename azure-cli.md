@@ -1,19 +1,25 @@
 # azure-cli
-get azure locations 
+### Get azure locations 
 
 ```cli
 az account list-locations --query "[].{Name:name, DisplayName:displayName}"
 ```
 
-get azure locations where the name contains "uk"
+### Get azure locations where the name contains "uk"
 
 ```cli
 az account list-locations --query "[?contains(displayName, 'UK')].{Name:name, DisplayName:displayName}"
 ```
 
-pulling image from acr
+### Pulling image from acr
 
 ```cli
 az acr login --name <acrName>
 docker pull <acrName>.azurecr.io/<imageName>:<tag>
 ```
+
+### Update vmss to use automatic os upgrade
+
+```cli
+az vmss update --name <vmssName> --resource-group <rgName> --set UpgradePolicy.AutomaticOSUpgradePolicy.EnableAutomaticOSUpgrade=true
+``````

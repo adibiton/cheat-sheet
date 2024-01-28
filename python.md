@@ -39,3 +39,33 @@
     ```python
     self.maxDiff = None
     ```
+
+### Create new environment with conda
+
+    ```bash
+    conda create --name <env_name> python=<version>
+    ```
+
+### Activate environment
+
+    ```bash
+    conda activate <env_name>
+    ```
+
+### Deactivate environment
+
+    ```bash
+    conda deactivate
+    ```
+
+### Install poetry in environment
+
+    ```bash
+    conda install poetry
+    ```
+    
+### Install dependencies in environment
+
+    ```bash
+    poetry install <package_name>
+    ```
